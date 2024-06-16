@@ -1,9 +1,9 @@
 import { NgFor, NgIf, NgStyle, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID, Signal, WritableSignal, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { MatIconModule } from '@angular/material/icon';
 import { Subscription } from 'rxjs';
 import { ThemeService } from '../services/themes/theme.service';
+import { MatIconModule } from '@angular/material/icon'; // Assurez-vous d'importer MatIconModule ici
 
 
 interface DynamicStyles {
