@@ -1,0 +1,13 @@
+<ng-container *ngIf="data">
+  <ngb-carousel>
+    <ng-template ngbSlide *ngFor="let image of data.bannerImages; let i = index">
+      <div class="picsum-img-wrapper">
+        <img class="carousel-img" [src]="url.imgCaroussel + image" alt="Slide image {{ i }}"
+          [loading]="i === 0 ? 'eager' : 'lazy'" />
+      </div>
+      <div class="carousel-caption">
+        <!-- Ajoutez du contenu pour la légende si nécessaire -->
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</ng-container>

@@ -1,0 +1,19 @@
+<h4 [ngStyle]="dynamicStylesTextLocalisation">{{data?.textPageAccueil}}</h4>
+    <div class="card-container">
+        <mat-card [ngStyle]="dynamicStylesTitle"
+            *ngFor="let card of [data?.titleCard1, data?.titleCard2, data?.titleCard3]; let i = index">
+            <mat-card-header>
+                <mat-card-title [ngStyle]="dynamicStylesTitle">{{ card }}</mat-card-title>
+            </mat-card-header>
+            
+            <img mat-card-image
+                [src]="url.imgCard + (i === 0 ? data?.maleImg : i === 1 ? data?.kittenImg : data?.femaleImg)"
+                alt="Card Image">
+                
+            <mat-card-content [ngStyle]="dynamicStylesText">{{ i === 0 ? data?.maleDescription : i === 1 ?
+                data?.kittenDescription : data?.femaleDescription }}</mat-card-content>
+            <mat-card-actions >
+                <button [routerLink]="['/males', '/chatons', '/femelles'][i]" class="custom-button" mat-raised-button >+ d'infos</button>
+            </mat-card-actions>
+        </mat-card> 
+    </div>  

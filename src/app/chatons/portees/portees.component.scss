@@ -1,0 +1,348 @@
+.title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.container-images {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.couple-images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.oval-image {
+    border-radius: 50%;
+    width: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.first-image {
+    margin-right: 0px;
+}
+
+.second-image {
+    margin-left: 0px;
+}
+
+.heart-image {
+    width: 140px;
+    object-fit: cover;
+    margin: 0 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.oval-image:hover, .heart-image:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.text {
+    text-align: center;
+    font-weight: bold;
+}
+
+.square-image:not([src*="chaton.png"]):hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+img[src*="chaton.png"] {
+    visibility: hidden;
+}
+
+
+a {
+    text-decoration: underline;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.carousel-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 40px;
+    position: relative;
+}
+
+.carousel-container::before {
+    content: "";
+    position: absolute;
+    top: 103%;
+    width: 50%;
+    border-bottom: 5px solid #d8d7d7;
+}
+
+.carousel-container::after {
+    content: "";
+    position: absolute;
+    top: 105.5%;
+    width: 50%;
+    border-top: 1px solid #d8d7d7;
+}
+
+
+.carousel-container:first-child {
+    border-bottom: none;
+}
+
+.carousel-arrow-left {
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    margin-top: 70px;
+}
+
+.carousel-arrow-right {
+    margin-top: 70px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.carousel-arrow-left:hover {
+    transform: scale(1.2);
+}
+
+.carousel-arrow-right:hover {
+    transform: scale(1.2);
+}
+
+.carousel-images {
+    align-items: center;
+}
+
+.square-image {
+    width: 320px;
+    height: 270px;
+
+    margin: 0 10px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.carousel-images {
+    transition: transform 0.5s ease-in-out;
+}
+
+
+
+.grp {
+    padding: 10px;
+    border-radius: 20px;
+    width: 50%;
+}
+
+.grp:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.carousel-title {
+    bottom: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+
+.chaton-info {
+    margin: 0;
+    text-align: center;
+}
+
+.chaton-info>* {
+    margin: 0;
+}
+
+.chaton-info>span {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+
+.left-value {
+    float: left;
+    content: "";
+    margin-left: 20px !important;
+    padding-bottom: 14px;
+    width: 20%;
+    border-bottom: 2px solid #494949;
+}
+
+.right-value {
+    margin-right: 20px !important;
+    float: right;
+    /* color: #E9920D; */
+    /* font-family: 'Oswald', sans-serif; */
+    padding-bottom: 14px;
+    width: 20%;
+    border-bottom: 2px solid #494949;
+}
+
+.carousel-arrow-right.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+
+@media (max-width: 1100px) {
+
+
+    .carousel-title {
+        font-size: 20px;
+    }
+
+    .left-value {
+        margin-top: 25px !important;
+    }
+
+    .right-value {
+        margin-top: 25px !important;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .oval-image {
+        width: 200px;
+    }
+
+    .heart-image {
+        width: 120px;
+    }
+
+
+}
+
+@media (max-width: 800px) {
+
+
+    .first-image {
+        margin-right: -10px;
+    }
+
+    .second-image {
+        margin-left: -10px;
+    }
+
+
+}
+
+@media (max-width: 750px) {
+
+.grp {
+    padding: 5px;
+    border-radius: 20px;
+    width: 33%;
+    font-size: small;
+}
+
+.left-value {
+    font-size: small;
+
+}
+
+.right-value {
+    font-size: small;
+
+}
+}
+
+
+@media (max-width: 700px) {
+
+    .oval-image {
+        width: 150px;
+    }
+
+    .heart-image {
+        width: 100px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .oval-image {
+        width: 120px;
+    }
+
+
+
+    .heart-image {
+        width: 80px;
+    }
+
+}
+
+
+@media (max-width: 510px) {
+
+    .carousel-title {
+        font-size: 15px;
+    }
+
+    .left-value {
+        margin-top: 17px !important;
+    }
+
+    .right-value {
+        margin-top: 17px !important;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 420px) {
+
+
+    .oval-image {
+        width: 100px;
+    }
+
+    .heart-image {
+        width: 60px;
+    }
+
+}
+
+
+@media (max-width: 320px) {
+
+    .oval-image {
+        width: 80px;
+    }
+
+    .heart-image {
+        width: 50px;
+    }
+
+}
+
+
+@media (max-width: 260px) {
+
+    .oval-image {
+        width: 60px;
+    }
+
+
+    .heart-image {
+        width: 50px;
+    }
+
+
+
+
+}

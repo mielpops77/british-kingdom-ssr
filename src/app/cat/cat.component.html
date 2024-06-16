@@ -1,0 +1,108 @@
+<h2 class="title" *ngIf="selectedCat() as cat" [ngStyle]="getDynamicStyles('title')">{{cat?.name}} {{cat?.breed}} </h2>
+
+<div class="container">
+
+    <div class="left-block">
+        <img *ngIf="selectedCat() as cat" [src]="imageUrlCatProfil + cat.urlProfil" (load)="onImageLoad('.photoProfil')"
+            class="photoProfil" alt="Photo de {{ cat.name }}"
+            (click)="openImageDialog(imageUrlCatProfil + cat.urlProfil)">
+    </div>
+
+
+    <div class="right-block">
+        <p *ngIf="selectedCat() as cat" class="text" [ngStyle]="getDynamicStyles('text-title')">
+            <span class="text-title">{{cat?.breed | uppercase }}</span> <br>
+            Nom {{cat?.name}} <br>
+            Née le {{ cat?.dateOfBirth | date:'yyyy/MM/dd' }} <br>
+            Robe {{cat?.robe}} <br>
+            Couleur des yeux {{cat?.eyeColor}} <br>
+            Saillie extérieur {{cat?.sailliesExterieures}} <br>
+        </p>
+
+
+        <div class="buttons">
+            <button *ngIf="screenWidth > 413" class="gray-button" [ngStyle]="getDynamicStyles('buttons')"
+                (click)="scrollToBottom()">Photo</button>
+            <button *ngIf="screenWidth > 413" class="gray-button" [ngStyle]="getDynamicStyles('buttons')"
+                (click)="openPedigree()">Pedigree</button>
+        </div>
+
+        <div *ngIf="screenWidth > 767" class="divider" [ngStyle]="getDynamicStyles('border')"></div>
+
+        <p *ngIf="screenWidth > 767" class="section-title" [ngStyle]="getDynamicStyles('text-title')">Les parents</p>
+        <br>
+
+        <div *ngIf="screenWidth > 767" class="parent-photos">
+            <img *ngIf="selectedCat() as cat" [src]="imageUrlParentsCat + cat?.urlProfilMother" class="small-photo"
+                (load)="onImageLoad('.small-photo')" alt="Photo de Prosper" alt="Photo"
+                (click)="openImageDialog(imageUrlParentsCat+ cat?.urlProfilMother)">
+            <img *ngIf="selectedCat() as cat" [src]="imageUrlParentsCat + cat?.urlProfilFather" class="small-photo2"
+                (load)="onImageLoad('.small-photo2')" alt="Photo de Prosper" alt="Photo"
+                (click)="openImageDialog(imageUrlParentsCat+ cat?.urlProfilFather)">
+        </div>
+    </div>
+</div>
+
+<div class="buttons">
+    <button *ngIf="screenWidth <= 413" [ngStyle]="getDynamicStyles('buttons')" class="gray-button"
+        (click)="scrollToBottom()">Photo</button>
+    <button *ngIf="screenWidth <= 413" [ngStyle]="getDynamicStyles('buttons')" class="gray-button"
+        (click)="openPedigree()">Pedigree</button>
+</div>
+
+<div class="buttons-small">
+    <button class="gray-button" [ngStyle]="getDynamicStyles('buttons')" (click)="scrollToBottom()">Photo</button>
+    <button class="gray-button" [ngStyle]="getDynamicStyles('buttons')" (click)="openPedigree()">Pedigree</button>
+</div>
+
+
+<div *ngIf="screenWidth <= 767" class="divider" [ngStyle]="getDynamicStyles('border')"></div>
+
+<p *ngIf="screenWidth <=  767" class="section-title" [ngStyle]="getDynamicStyles('text-title')">Les parents</p>
+<br>
+<div *ngIf="screenWidth <=  767" class="parent-photos">
+    <img *ngIf="selectedCat() as cat" (load)="onImageLoad('.small-photo')"
+        [src]="imageUrlParentsCat + cat?.urlProfilMother" class="small-photo" alt="Photo de Prosper" alt="Photo"
+        (click)="openImageDialog(imageUrlParentsCat+ cat?.urlProfilMother)">
+    <img *ngIf="selectedCat() as cat" (load)="onImageLoad('.small-photo2')"
+        [src]="imageUrlParentsCat + cat?.urlProfilFather" class="small-photo2" alt="Photo de Prosper" alt="Photo"
+        (click)="openImageDialog(imageUrlParentsCat+ cat?.urlProfilFather)">
+</div>
+<br>
+
+<div class="photo-list" [ngStyle]="getDynamicStyles('fond-photos')" *ngIf="screenWidth >=  576">
+    <div *ngIf="selectedCat() as cat">
+        <div class="rowImg" *ngFor="let imageRow of getRows(cat?.images, 3)">
+            <div *ngFor="let image of imageRow" class="photo-item">
+                <img [src]="imageUrlCatImg + image" class="photo" alt="Photo de {{ cat?.name }}"
+                    (click)="openImageDialog(imageUrlCatImg + image)">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="photo-list" [ngStyle]="getDynamicStyles('fond-photos')" *ngIf="(screenWidth <  576 && screenWidth >= 430)">
+    <div *ngIf="selectedCat() as cat">
+        <div class="rowImg" *ngFor="let imageRow of getRows(cat?.images, 2)">
+            <div *ngFor="let image of imageRow" class="photo-item">
+                <img [src]="imageUrlCatImg + image" class="photo" alt="Photo de {{ cat?.name }}"
+                    (click)="openImageDialog(imageUrlCatImg + image)">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="photo-list" [ngStyle]="getDynamicStyles('fond-photos')" *ngIf="(screenWidth <  430)">
+    <div *ngIf="selectedCat() as cat">
+        <div class="rowImg" *ngFor="let imageRow of getRows(cat?.images, 1)">
+            <div *ngFor="let image of imageRow" class="photo-item">
+                <img [src]="imageUrlCatImg + image" class="photo" alt="Photo de {{ cat?.name }}"
+                    (click)="openImageDialog(imageUrlCatImg + image)">
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>BritishKingdom</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <!-- Preloads -->
+  <!-- <link rel="preload" href="https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Me5WZLCzYlKw.woff2" as="font" type="font/woff2" crossorigin> -->
+  <!-- <link rel="preload" href="https://fonts.gstatic.com/s/materialicons/v55/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2" as="font" type="font/woff2" crossorigin> -->
+
+  <!-- Fonts -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"> -->
+
+  <link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <noscript>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </noscript>
+
+  <!-- CSS -->
+  <link rel="preload" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.css"
+    integrity="sha512-C4k/QrN4udgZnXStNFS5osxdhVECWyhMsK1pnlk+LkC7yJGCqoYxW4mH3/ZXLweODyzolwdWSqmmadudSHMRLA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* CSS Critique intégré */
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navUser ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navUser ul li {
+      margin-right: 10px;
+    }
+
+    .navUser ul li:last-child {
+      margin-right: 0;
+    }
+
+    .navUser ul li a {
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 22px;
+      transition: background-color 0.3s ease;
+      display: block;
+    }
+
+    .navUser ul li a:hover {
+      background-color: var(--hover-color-menu);
+    }
+
+    .mobile-menu-button {
+      cursor: pointer;
+      align-items: center !important;
+      justify-content: center;
+      margin-bottom: 20px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body class="mat-typography"
+  style="background-image: url(https://local-fr-public.s3.eu-west-3.amazonaws.com/prod/webtool/userfiles/36722/fond-de-site.jpg)">
+  <app-root></app-root>
+</body>
+
+</html>

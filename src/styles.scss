@@ -1,0 +1,350 @@
+// @import '~bootstrap/dist/css/bootstrap.min.css';
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+
+@font-face {
+  font-family: "Dancing Script";
+  src: url("/assets/fonts/DancingScript-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900; /* Range for variable font weights */
+  font-style: normal;
+  font-display: swap; /* Use swap to improve loading performance */
+}
+
+@font-face {
+  font-family: "Amatic SC";
+  src: url("/assets/fonts/AmaticSC-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Amatic SC";
+  src: url("/assets/fonts/AmaticSC-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cabin";
+  src: url("/assets/fonts/Cabin-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Utilisation de 'swap' pour optimiser le chargement de la police */
+}
+
+/* Cabin Variable Font Italic */
+@font-face {
+  font-family: "Cabin";
+  src: url("/assets/fonts/Cabin-Italic-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: normal; /* Ou spécifiez font-weight: italic; si le fichier est italic */
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("/assets/fonts/Exo2-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("/assets/fonts/Exo2-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/assets/fonts/JosefinSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/assets/fonts/JosefinSans-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("/assets/fonts/Lato-Black.ttf") format("truetype");
+  font-weight: 900; /* Correspond à la graisse "Black" */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("/assets/fonts/Lato-BlackItalic.ttf") format("truetype");
+  font-weight: 900; /* Correspond à la graisse "Black" */
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("/assets/fonts/Lato-Bold.ttf") format("truetype");
+  font-weight: bold; /* Correspond à la graisse "Bold" */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("/assets/fonts/Merriweather-Black.ttf") format("truetype");
+  font-weight: 900; /* Correspond à la graisse "Black" */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("/assets/fonts/Merriweather-BlackItalic.ttf") format("truetype");
+  font-weight: 900; /* Correspond à la graisse "Black" */
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("/assets/fonts/Merriweather-Bold.ttf") format("truetype");
+  font-weight: bold; /* Correspond à la graisse "Bold" */
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('/assets/fonts/Nunito-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal; /* Le poids de la police, par exemple normal ou 400 */
+  font-style: normal; /* Le style de la police, par exemple normal ou italic */
+  font-display: swap; /* Utilisation de 'swap' pour optimiser le chargement de la police */
+}
+
+
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('/assets/fonts/Nunito-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal; /* Le poids de la police, par exemple normal ou 400 */
+  font-style: italic; /* Le style de la police, par exemple normal ou italic */
+  font-display: swap; /* Utilisation de 'swap' pour optimiser le chargement de la police */
+}
+
+@font-face {
+  font-family: 'O Oswald';
+  src: url('/assets/fonts/Oswald-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal; /* Le poids de la police, par exemple normal ou 400 */
+  font-style: normal; /* Le style de la police, par exemple normal ou italic */
+  font-display: swap; /* Utilisation de 'swap' pour optimiser le chargement de la police */
+}
+
+@font-face {
+  font-family: 'Overlock';
+  src: url('/assets/fonts/Overlock-Black.ttf') format('truetype');
+  font-weight: 900; /* Poids de la police, 900 pour Black */
+  font-style: normal; /* Style de la police, normal ou italic */
+  font-display: swap; /* Utilisation de 'swap' pour optimiser le chargement de la police */
+}
+
+@font-face {
+  font-family: 'Overlock';
+  src: url('/assets/fonts/Overlock-BlackItalic.ttf') format('truetype');
+  font-weight: 900; /* Poids de la police, 900 pour Black Italic */
+  font-style: italic; /* Style de la police, normal ou italic */
+  font-display: swap; /* Utilisation de 'swap' pour optimiser le chargement de la police */
+}
+
+@font-face {
+  font-family: 'Overlock';
+  src: url('/assets/fonts/Overlock-Bold.ttf') format('truetype');
+  font-weight: bold; /* Poids de la police, bold pour Bold */
+  font-style: normal; /* Style de la police, normal ou italic */
+  font-display: swap; /* Utilisation de 'swap' pour optimiser le chargement de la police */
+}
+
+
+/* Oxygen Bold */
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: bold;
+  src: url('/assets/fonts/Oxygen-Bold.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Oxygen Light */
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 300; /* Vous pouvez ajuster le poids si nécessaire */
+  src: url('/assets/fonts/Oxygen-Light.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Oxygen Regular */
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/Oxygen-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Poppins Black */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/Poppins-Black.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Poppins Black Italic */
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 900;
+  src: url('/assets/fonts/Poppins-BlackItalic.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Poppins Bold */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/Poppins-Bold.ttf') format('truetype');
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/PTSans-Bold.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: url('/assets/fonts/PTSans-BoldItalic.ttf') format('truetype');
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: normal;
+  src: url('/assets/fonts/PTSans-Italic.ttf') format('truetype');
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400 700; /* Range for variable font weights */
+  src: url('/assets/fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: italic;
+  font-weight: 400 700; /* Range for variable font weights */
+  src: url('/assets/fonts/Raleway-Italic-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400 700; /* Range for variable font weights */
+  src: url('/assets/fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400 700; /* Range for variable font weights */
+  src: url('/assets/fonts/RobotoSlab-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+
+
+
+@font-face {
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 100 900; /* Range for variable font weights */
+  src: url('/assets/fonts/Signika-VariableFont_GRAD,wght.ttf') format('truetype');
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 100 900; /* Range for variable font weights */
+  src: url('/assets/fonts/RobotoCondensed-Italic-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 100 900; /* Range for variable font weights */
+  src: url('/assets/fonts/RobotoCondensed-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+
+
+.custom-dialog-container .mat-dialog-container {
+  padding: 10px;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

@@ -1,0 +1,102 @@
+.parent-container {
+    text-align: center;
+    margin-top: 40px;
+    /* margin-bottom: 30px; */
+  }
+  
+
+.logo-div
+{
+  text-align: center;
+  padding-top: 20px;
+}
+
+.logoSrc
+{
+  width: 150px;
+  height: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+
+
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-bottom: 30px; */
+  margin-top: 10px;
+
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 30px;
+  font-size: 2rem;
+}
+
+i
+{
+  margin: 0 20px; /* Ajustez la marge entre les icônes selon vos besoins */
+
+}
+
+.video-container {
+  text-align: center; /* Alignement horizontal */
+}
+
+.center-video
+{
+  border-radius: 1%;
+  width: 74%;
+
+}
+
+.video-container video {
+  margin: 0 auto; /* Centrer horizontalement */
+}
+#twitter:hover
+{
+  transform: scale(1.2); 
+
+  cursor: pointer;
+}
+
+#instagram:hover
+{
+  transform: scale(1.2); 
+
+  cursor: pointer;
+}
+
+#facebook:hover
+{
+  
+  transform: scale(1.2); 
+
+  cursor: pointer;
+
+}
+
+#tiktok:hover
+{
+  
+  transform: scale(1.2); 
+
+  cursor: pointer;
+
+}
+
+
+#youtube:hover
+{
+  
+  transform: scale(1.2); 
+
+  cursor: pointer;
+
+}

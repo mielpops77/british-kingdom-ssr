@@ -1,0 +1,31 @@
+<br>
+<br>
+<div class="image-container">
+    <div [ngClass]="getGridClass(cats().length)">
+        <div *ngFor="let cat of cats()">
+            <p class="name">{{ cat.name }}</p>
+            <p class="name">Couleur: {{ cat.robe }}</p>
+            <img [src]="url.imgProfilCat + cat.urlProfil" #roundedImage (load)="onImageLoad()" class="rounded-image"
+                (click)="redirectToNewUrl(cat.id, cat)">
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+
+<hr class="gray-line" *ngIf="dynamicStyles() as dynamicStyle" [ngStyle]="dynamicStyle?.borderColor">
+
+
+<div  *ngIf="dynamicStyles() as dynamicStyle"  class="description">
+    <h3  [ngStyle]="dynamicStyle?.title">{{data()?.titlePageFemelles}}</h3>
+    <p [ngStyle]="dynamicStyle?.text">{{data()?.textPageFemelles}}</p>
+
+
+</div>
+
+<hr *ngIf="dynamicStyles() as dynamicStyle" class="gray-line" [ngStyle]="dynamicStyle?.borderColor">
+
+<br>
+<br>
+<br>

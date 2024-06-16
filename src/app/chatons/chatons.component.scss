@@ -1,0 +1,373 @@
+.title {
+    margin-top: 50px;
+    /* color: rgb(41, 41, 41); */
+    /* font-family: 'Amatic SC', corben, serif; */
+    text-align: center;
+    font-size: 30px;
+    /* color: #D5A11E; */
+    /* color: #CC5037; */
+    /* font-family: 'Amatic SC', sans-serif; */
+    font-weight: 500;
+    margin-bottom: 20px !important;
+    font-weight: bold;
+  
+  }
+  
+  .ligne {
+    width: 33%;
+    background-color: transparent;
+    /* Couleur de fond (peut être laissée transparente si besoin) */
+    border-top: 3px dashed;
+    /* Couleur de la bordure en noir */
+    /* color: black !important; */
+    margin-bottom: 30px !important;
+  
+    /* Centrer horizontalement */
+  }
+  
+  .ligne2 {
+    width: 80%;
+    background-color: transparent;
+    /* Couleur de fond (peut être laissée transparente si besoin) */
+    border-top: 6px dotted;
+    /* Couleur de la bordure en noir */
+    /* color: black !important; */
+    /* color: black; */
+    /* color: #CC5037; */
+    /* color: #A56D18;*/
+    margin-bottom: 100px !important;
+    margin: 0 auto;
+    /* Centrer horizontalement */
+  }
+  
+  
+  
+  
+  
+  
+  .box {
+    display: flex;
+    flex-direction: column;
+    /* Empiler les éléments verticalement */
+    align-items: center;
+    /* Centrer horizontalement */
+    justify-content: center;
+    /* Centrer verticalement */
+    width: 70%;
+    /* height: 115px; */
+    /* background-color: #D4AE7D; */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .name {
+    /* color: rgb(41, 41, 41); */
+    /* color: #CC5037; */
+    margin-bottom: 20px !important;
+    font-weight: bold;
+    /* color: #333333; */
+  
+    /* color: #704D12; */
+  
+    /* font-family: 'Amatic SC', sans-serif; */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+  
+  }
+  
+  .description {
+    margin-bottom: 20px !important;
+  
+    text-align: center;
+    /* color: rgb(41, 41, 41); */
+    /* color: #CC5037; */
+    /* color: #A56D18;
+     */
+    /* color: #333333; */
+    /* color: #CC7037; */
+    /* color: #CC5037; */
+  
+    font-weight: bold;
+  
+  
+    /* font-family: 'Amatic SC', sans-serif; */
+    /* font-family: corben, serif; */
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  
+  
+  
+  .button-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    /* Facultatif : Ajouter un espacement vertical entre les boutons */
+  }
+  
+  .custom-button {
+    /* background-color: #54869C !important;
+    color: white !important; */
+    font-size: 16px !important;
+    padding: 28px 10px;
+    transition: transform 0.2s !important;
+    margin: 10px !important;
+  }
+  
+  
+  .custom-button2 {
+    /* background-color: #54869C !important; */
+    /* color: white !important; */
+    font-size: 16px;
+    padding: 28px 10px;
+    transition: transform 0.2s;
+    margin: 10px;
+  }
+  
+  .custom-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .custom-button2:hover {
+    transform: scale(1.1);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .couple-images-container {
+    display: flex;
+    justify-content: center;
+    /* Centre les images horizontalement */
+    align-items: center;
+    /* Centre les images verticalement */
+  }
+  
+  
+  .first-image {
+    margin-right: 0px;
+  }
+  
+  
+  
+  .heart-image {
+    /* width: 140px;  */
+    width: 50px;
+  
+    /* width: 140px; */
+    height: auto;
+    /* height: 140px; */
+    object-fit: cover;
+    margin: 0 15px;
+    /* Ajustez la marge du cœur selon vos besoins */
+    /* Ajout de l'effet de transition */
+  }
+  
+  
+  .heart-image.loaded {
+    width: 140px;
+    /* width: 140px; */
+    height: auto;
+    /* height: 140px; */
+    object-fit: cover;
+    margin: 0 15px;
+    /* Ajustez la marge du cœur selon vos besoins */
+    transition: width 3s ease;
+    /* Ajout de l'effet de transition */
+  }
+  
+  
+  .oval-image {
+    border-radius: 50%;
+    /* width: 18%; */
+    /* width: 250px; */
+    width: 90px;
+    transition: width 2s ease;
+    height: auto;
+    /* width: 300px; */
+    /* height: 300px;  */
+    object-fit: cover;
+    /* Ajout de l'effet de transition */
+  }
+  
+  
+  
+  
+  /* Effet hover sur les images */
+  .oval-image:hover, .heart-image:hover {
+    transform: scale(1.1);
+    /* Ajustez la valeur de l'échelle selon vos besoins */
+    cursor: pointer;
+  }
+  
+  
+  
+  
+  .oval-image.loaded {
+    width: 250px;
+    transition: width 3s ease;
+    /* Taille normale de l'image après chargement */
+  }
+  
+  
+  
+  
+  
+  
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .svgImg {
+    position: absolute;
+    top: 11;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    background-size: cover;
+    z-index: -1;
+    /* Pour placer le fond derrière l'image */
+  }
+  
+  
+  
+  .caroussel-bloc {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+  
+  
+  
+  @media (max-width: 1000px) {
+    .oval-image.loaded {
+      width: 200px;
+    }
+  
+    .heart-image.loaded {
+      width: 120px;
+    }
+  
+  }
+  
+  @media (max-width: 700px) {
+    .oval-image.loaded {
+      width: 150px;
+    }
+  
+  
+  
+    .heart-image.loaded {
+      width: 100px;
+    }
+  
+    .title {
+      margin-bottom: 80px !Important;
+  
+    }
+  
+  }
+  
+  
+  
+  @media (max-width: 550px) {
+    .custom-button2 {
+      display: none;
+    }
+  
+    .oval-image.loaded {
+      width: 120px;
+    }
+  
+  
+  
+    .heart-image.loaded {
+      width: 80px;
+    }
+  
+  }
+  
+  
+  @media (max-width: 420px) {
+  
+  
+    .oval-image {
+      width: 100px;
+    }
+  
+  
+  
+    .heart-image {
+      width: 60px;
+    }
+  
+    .title {
+      margin-bottom: 80px !Important;
+  
+    }
+  
+  
+  }
+  
+  
+  @media (max-width: 320px) {
+  
+  
+    .oval-image.loaded {
+      width: 80px;
+    }
+  
+  
+  
+    .heart-image.loaded {
+      width: 50px;
+    }
+  
+  }
+  
+  
+  @media (max-width: 260px) {
+  
+  
+    .oval-image.loaded {
+      margin-top: 30px;
+  
+      width: 60px;
+    }
+  
+  
+  
+    .heart-image.loaded {
+      margin-top: 30px;
+      width: 50px;
+    }
+  
+    .title {
+      margin-bottom: 100px !Important;
+  
+    }
+  
+  
+  }
+  
+  /* @media (max-width: 500px) {
+    .heart {
+      margin-top: 130px;
+    }
+  
+  } */

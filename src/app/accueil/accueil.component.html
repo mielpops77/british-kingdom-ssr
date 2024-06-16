@@ -1,0 +1,26 @@
+<div class="parent-container">
+
+  <app-caroussel [data]="data()"></app-caroussel>
+  <br><br>
+  <app-cards [data]="data()"></app-cards>
+</div>
+
+
+<div class="video-container">
+  <video controls class="center-video">
+    <source src="assets/videos.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
+<div class="logo-div">
+  <img src="assets/photo_2023-12-24_21-37-46.jpg" class="logoSrc" alt="Description de l'image">
+</div>
+<div class="social-icons">
+  <i *ngIf="profil()?.facebook !== '' " id="facebook" class="fab fa-facebook" (click)="redirect('facebook')"></i>
+  <i *ngIf="profil()?.twitter !== '' " id="twitter" class="fab fa-twitter" (click)="redirect('twitter')"></i>
+  <i *ngIf="profil()?.instagram !== '' " id="instagram" class="fab fa-instagram" (click)="redirect('instagram')"></i>
+  <i *ngIf="profil()?.tiktok !== '' " id="tiktok" class="fab fa-tiktok" (click)="redirect('tiktok')"></i>
+  <i *ngIf="profil()?.youtube !== '' " id="youtube" class="fab fa-youtube" (click)="redirect('youtube')"></i>
+</div>

@@ -1,0 +1,13 @@
+
+.carousel-img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+   filter: invert(1);
+}
