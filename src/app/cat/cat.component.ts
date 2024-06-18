@@ -84,6 +84,7 @@ export class CatComponent {
         if (catId) {
           this.catService.getCatById(catId).subscribe((data: any) => {
             this.selectedCat.set(data);
+            console.log('getId',data);
           });
         }
       }
