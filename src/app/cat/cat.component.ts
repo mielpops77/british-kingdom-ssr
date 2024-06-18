@@ -74,18 +74,24 @@ export class CatComponent {
       }
 
       if (localStorage.getItem('selectedCat') !== null) {
+        console.log('localStorage?????');
+
         const selectedCatString = localStorage.getItem('selectedCat');
         if (selectedCatString) {
           this.selectedCat.set(JSON.parse(selectedCatString));
         }
       }
       else {
+        console.log('else?????');
+
         const catId = this.route.snapshot.paramMap.get('id');
         if (catId) {
           this.catService.getCatById(catId).subscribe((data: any) => {
             this.selectedCat.set(data);
             console.log('getId',data);
-          });
+          }
+        
+        );
         }
       }
 
