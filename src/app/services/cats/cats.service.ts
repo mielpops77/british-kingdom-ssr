@@ -1,6 +1,6 @@
 import { environment } from '../../../environments/environment';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject, Observable, catchError, throwError } from 'rxjs';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Cat } from '../../models/cat';
 
@@ -30,14 +30,35 @@ export class CatsService {
       }
     )
   }
-
-
   getCatById(catId: string): Observable<Cat> {
     const profilId = environment.id;
-    console.log('ddddd');
-    return this.http.get<Cat>(`${environment.urlCats}/${catId}`, {
+
+    // Avant de faire la requête HTTP, affichez le profilId et l'URL de la requête
+    console.log('Profil ID:', profilId);
+    const url = `${environment.urlCats}/${catId}`;
+    console.log('URL de la requête:', url);
+
+    // Effectuer la requête HTTP
+    return this.http.get<Cat>(url, {
       params: { profilId: profilId.toString() }
-    });
+    }).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  private handleError(error: HttpErrorResponse) {
+    if (error.error instanceof ErrorEvent) {
+      // Erreur côté client
+      console.error('Une erreur s\'est produite:', error.error.message);
+    } else {
+      // Erreur côté serveur
+      console.error(
+        `Code d'erreur ${error.status}, ` +
+        `Détails : ${error.error}`);
+    }
+    // Retourne une observable avec une erreur utilisateur-lisible
+    return throwError(
+      'Une erreur est survenue; veuillez réessayer plus tard.');
   }
 
 }
