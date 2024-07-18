@@ -84,7 +84,7 @@ export class CatComponent {
 
         const catId = this.route.snapshot.paramMap.get('id');
         if (catId) {
-          this.catService.getallCats().subscribe((data: any) => {
+          this.catService.getCatById(catId).subscribe((data: any) => {
             this.selectedCat.set(data);
             console.log('getId',data);
           }

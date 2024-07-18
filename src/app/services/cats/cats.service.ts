@@ -35,6 +35,7 @@ export class CatsService {
     const url = environment.urlCats;
     const profilId = environment.id;
     const params = { profilId: profilId.toString() }
+
     return this.http.get<Cat[]>(url, { params })
   }
 
@@ -46,8 +47,6 @@ export class CatsService {
     // Avant de faire la requête HTTP, affichez le profilId et l'URL de la requête
     console.log('Profil ID:', profilId);
     const url = `${environment.urlCats}/${catId}`;
-    console.log('maaaaaaaaaaaaaaaj');
-    console.log('maaaaaaaaaaaaaaaj');
 
     console.log('URL de la requête:', url);
 

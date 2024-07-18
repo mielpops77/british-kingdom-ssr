@@ -26,7 +26,8 @@ export class InitializationService {
       this.profilService.loadProfil(),
       this.catsService.loadCats(),
       this.porteesService.loadPortee(),
-      this.ChatonsService.loadChaton()
+      this.ChatonsService.loadChaton(),
+      this.catsService.getallCats().subscribe((x)=> console.log('xxxxxxxxxxx',x))
     ]);
   }
 }
