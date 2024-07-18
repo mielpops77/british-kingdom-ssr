@@ -1,14 +1,15 @@
+import { ApplicationRef, Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
+import { InitializationService } from './services/initialization.service';
 import { ThemeService } from './services/themes/theme.service';
+import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
-import { ApplicationRef, Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
+import { environment } from '../environments/environment';
+import { isPlatformBrowser } from '@angular/common';
+import { Template1 } from './models/template1';
 import { RouterOutlet } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { Template1 } from './models/template1';
-import { isPlatformBrowser } from '@angular/common';
-import { environment } from '../environments/environment';
-import { FooterComponent } from './footer/footer.component';
-import { InitializationService } from './services/initialization.service';
+
 
 @Component({
   selector: 'app-root',

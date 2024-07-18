@@ -56,8 +56,6 @@ export class CatComponent {
     this.imageUrlCatProfil = environment.imgProfilCat;
     this.isBrowser = isPlatformBrowser(this.platformId);
     this.imageUrlCatImg = environment.imgCat;
-
-
   }
 
   ngOnInit(): void {
