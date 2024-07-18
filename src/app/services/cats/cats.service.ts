@@ -30,6 +30,16 @@ export class CatsService {
       }
     )
   }
+
+  getallCats(): Observable<Cat[]> {
+    const url = environment.urlCats;
+    const profilId = environment.id;
+    const params = { profilId: profilId.toString() }
+    return this.http.get<Cat[]>(url, { params })
+  }
+
+
+
   getCatById(catId: string): Observable<Cat> {
     const profilId = environment.id;
 
